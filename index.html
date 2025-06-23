@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shobitha Hair Care & Bridal Makeup - Premier Ladies' Salon in Kanhangad</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="img/logo.png">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        /* Ensure WhatsApp button is visible */
+        .whatsapp-sticky {
+            position: fixed !important;
+            bottom: 20px !important;
+            left: 20px !important;
+            z-index: 9999 !important;
+        }
+
+        /* Uniform Section Styling */
+        .section-padding {
+            padding: 6rem 0;
+        }
+
+        .section-header {
+            margin-bottom: 4rem;
+        }
+
+        .section-header .section-subtitle {
+            color: var(--primary-color);
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-header .section-title {
+            color: #2c3e50;
+            font-weight: 700;
+        }
+
+        .bg-soft-pink {
+            background-color: #fceef5;
+        }
+
+        .bg-soft-white {
+            background-color: #f8f9fa;
+        }
+
+        .service-card, 
+        .testimonial-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover, 
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 1rem 3rem rgba(0,0,0,0.1) !important;
+        }
+
+        /* Mobile Social Icons */
+        .mobile-social-icons {
+            background: #fff;
+            border-bottom: 1px solid #f0f0f0;
+            z-index: 1050;
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+        }
+        .mobile-social-icons a {
+            color: #de0d87;
+            transition: color 0.2s;
+        }
+        .mobile-social-icons a:hover {
+            color: #c30b76;
+        }
+        @media (min-width: 992px) {
+            .mobile-social-icons { display: none !important; }
+        }
+
+        /* Sticky Google Review Button */
+        .google-review-btn {
+            position: fixed;
+            bottom: 90px;
+            left: 20px;
+            z-index: 9999;
+            background: #fff;
+            color: #de0d87;
+            border: 2px solid #de0d87;
+            border-radius: 30px;
+            padding: 10px 22px 10px 16px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(222, 13, 135, 0.15);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1rem;
+            transition: background 0.2s, color 0.2s;
+        }
+        .google-review-btn:hover {
+            background: #de0d87;
+            color: #fff;
+        }
+        .google-review-btn i {
+            font-size: 1.3em;
+        }
+
+        /* Header Social Icons (always visible) */
+        .header-social-icons {
+            background: #fff;
+            border-bottom: 1px solid #f0f0f0;
+            z-index: 1050;
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+        }
+        .header-social-icons a {
+            color: #de0d87;
+            transition: color 0.2s;
+        }
+        .header-social-icons a:hover {
+            color: #c30b76;
+        }
+
+        .topbar-google-review-simple:hover {
+            background: #f8f9fa;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(60,60,60,0.06);
+            text-decoration: none;
+        }
+
+        @media (max-width: 991.98px) {
+            .topbar-mobile .topbar-review-btn {
+                padding: 2px 10px 2px 10px !important;
+                font-size: 0.95em !important;
+                border-radius: 12px !important;
+                min-width: unset;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .hero-landing {
+                padding-top: 0 !important;
+            }
+        }
+
+        .hero-landing.py-5 {
+            padding-top: 0 !important;
+            padding-bottom: 3rem !important;
+        }
+        @media (max-width: 575.98px) {
+            .hero-landing {
+                padding-top: 0 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Topbar (desktop/tablet) -->
+    <div class="topbar d-none d-lg-flex justify-content-center align-items-center px-3 py-1 fixed-top">
+        <div class="topbar-content d-flex align-items-center gap-3">
+            <a href="#" class="topbar-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="topbar-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="topbar-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/918075340778" class="topbar-icon" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="tel:8075340778" class="topbar-icon" aria-label="Call" target="_blank"><i class="fas fa-phone-alt"></i></a>
+            <a href="https://maps.app.goo.gl/yzvSKZveDJ7Aws3TA" class="topbar-location d-flex align-items-center px-2 py-1" target="_blank">
+                <i class="fas fa-map-marker-alt me-1"></i>
+                <span>Our Location</span>
+            </a>
+            <a href="https://maps.app.goo.gl/yzvSKZveDJ7Aws3TA" class="topbar-google-review-simple d-flex align-items-center px-2 py-1" target="_blank" style="text-decoration:none;gap:6px;">
+                <img src="img/googlereview.png" alt="Google" style="height:22px;width:22px;vertical-align:middle;">
+                <span style="color:#fbbc04;font-size:1.1em;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span style="font-weight:600;color:#222;font-size:1em;">4.9 Rated</span>
+            </a>
+            <a href="https://g.page/r/CQ00DAVEaP9-EBM/review" class="topbar-review-btn btn btn-sm btn-warning ms-2" target="_blank" style="font-weight:600;color:#fff;background:#fbbc04;border:none;border-radius:16px;padding:4px 16px 4px 16px;">Review Us</a>
+            <span id="shop-status" class="ms-3 fw-bold"></span>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header class="fixed-top main-navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <div class="brand-logo">
+                        <div class="logo-icon">
+                            <img src="img/logo.png" alt="Shobitha Logo">
+                        </div>
+                        <div class="brand-text">
+                            <h1>Shobitha</h1>
+                            <span>Hair Care & Bridal Makeup</span>
+                        </div>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="topbar-mobile d-lg-none mt-3 justify-content-center text-center">
+                        <div class="d-flex flex-wrap align-items-center justify-content-center gap-2 mb-2">
+                            <a href="#" class="topbar-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="topbar-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="topbar-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="https://wa.me/918075340778" class="topbar-icon" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                            <a href="tel:8075340778" class="topbar-icon" aria-label="Call" target="_blank"><i class="fas fa-phone-alt"></i></a>
+                            <a href="https://maps.app.goo.gl/yzvSKZveDJ7Aws3TA" class="topbar-location d-flex align-items-center px-2 py-1 mx-1" target="_blank" style="text-decoration:none;gap:6px;">
+                                <img src="img/googlereview.png" alt="Google" style="height:22px;width:22px;vertical-align:middle;">
+                                <span style="color:#fbbc04;font-size:1.1em;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                <span style="font-weight:600;color:#222;font-size:1em;">4.9 Rated</span>
+                            </a>
+                            <a href="https://g.page/r/CQ00DAVEaP9-EBM/review" class="topbar-review-btn btn btn-sm btn-warning ms-2" target="_blank" style="font-weight:600;color:#fff;background:#fbbc04;border:none;border-radius:16px;padding:4px 16px 4px 16px;">Review Us</a>
+                        </div>
+                        <div>
+                            <span id="shop-status-mobile" class="fw-bold" style="display:inline-block;margin-top:2px;"></span>
+                        </div>
+                    </div>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary ms-lg-3" href="pages/booking.html">Book Appointment</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-landing py-5">
+        <div class="container-fluid px-0">
+            <div class="row align-items-center flex-column-reverse flex-lg-row">
+                <!-- Text Column -->
+                <div class="col-lg-6 d-flex flex-column align-items-start justify-content-center px-4 px-lg-5 py-4 py-lg-0">
+                    <h1 class="display-4 fw-bold">Welcome to Beauty & Grace</h1>
+                    <p class="lead mb-4">
+                        Experience the art of beauty transformation at Kanhangad's premier ladies' salon
+                    </p>
+                    <a href="pages/booking.html" class="btn btn-lg btn-primary">Book Appointment</a>
+                </div>
+                <!-- Image Column -->
+                <div class="col-lg-6 px-0">
+                    <img src="img/hero1.png" alt="Welcome" class="img-fluid rounded-0 shadow-none w-100" style="display:block;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-section section-padding py-5 bg-soft-pink">
+        <div class="container">
+            <div class="text-center mb-5 section-header">
+                <h6 class="section-subtitle text-uppercase fw-bold">Welcome to Shobitha</h6>
+                <h2 class="section-title display-4 fw-bold">About Us</h2>
+               
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="https://images.pexels.com/photos/3738339/pexels-photo-3738339.jpeg" alt="Salon Interior" class="img-fluid rounded shadow-sm">
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                   
+                    <h2 class="display-6 fw-bold text-navy mb-4">A Decade of Beauty and Trust</h2>
+                    <p class="text-muted mb-4">Established over a decade ago in the heart of Kanhangad, Shobitha – Hair Care & Bridal Makeup is a trusted beauty destination known for its personalized services, warm atmosphere, and professional expertise. With 10+ years of service, our salon has become a go-to place for clients seeking the perfect balance of traditional care and modern beauty trends.</p>
+                    <a href="pages/about.html" class="btn btn-primary rounded-pill px-4 py-2">READ MORE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Highlights -->
+    <section class="services-highlights section-padding py-5 bg-soft-white">
+        <div class="container">
+            <div class="text-center mb-5 section-header">
+                <h6 class="section-subtitle text-success text-uppercase fw-bold">Transforming Lives</h6>
+                <h2 class="section-title display-4 fw-bold">Our Services</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <a href="pages/hair.html" class="service-img-link d-block position-relative overflow-hidden rounded-4 shadow-sm text-decoration-none">
+                        <img src="img/brial.png" alt="Hair" class="w-100 service-img-square" style="object-fit:cover;object-position:center top;">
+                        <div class="service-img-title-below text-center pt-3 pb-2">
+                            <span class="service-img-title text-uppercase">Makeup</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <a href="pages/skin.html" class="service-img-link d-block position-relative overflow-hidden rounded-4 shadow-sm text-decoration-none">
+                        <img src="img/skin.png" alt="Skin" class="w-100 service-img-square" style="object-fit:cover;object-position:center;">
+                        <div class="service-img-title-below text-center pt-3 pb-2">
+                            <span class="service-img-title text-uppercase">Skin</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <a href="pages/makeup.html" class="service-img-link d-block position-relative overflow-hidden rounded-4 shadow-sm text-decoration-none">
+                        <img src="img/hair.png" alt="Makeup" class="w-100 service-img-square" style="object-fit:cover;object-position:center;">
+                        <div class="service-img-title-below text-center pt-3 pb-2">
+                            <span class="service-img-title text-uppercase">Hair</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <a href="pages/handsfeet.html" class="service-img-link d-block position-relative overflow-hidden rounded-4 shadow-sm text-decoration-none">
+                        <img src="img/brial.png" alt="Hands & Feet" class="w-100 service-img-square" style="object-fit:cover;object-position:center;">
+                        <div class="service-img-title-below text-center pt-3 pb-2">
+                            <span class="service-img-title text-uppercase">Hands & Feet</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <style>
+            .service-img-link { transition: box-shadow 0.2s, transform 0.2s; }
+            .service-img-link:hover { box-shadow: 0 8px 32px rgba(222,13,135,0.13); transform: translateY(-4px) scale(1.01); }
+            .service-img-title-below {
+                background: none;
+                min-height: unset;
+            }
+            .service-img-title {
+                color: #de0d87;
+                font-size: 1.1rem;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                background: none;
+                padding: 0.2em 0.5em;
+                border-radius: 1em;
+                box-shadow: none;
+                text-shadow: none;
+                display: inline-block;
+            }
+            .service-img-square {
+                aspect-ratio: 1/1;
+                height: auto;
+                min-height: 220px;
+                max-height: 340px;
+                object-position: center top;
+                display: block;
+            }
+            @media (max-width: 991.98px) {
+                .service-img-title { font-size: 0.95rem; }
+                .service-img-square { min-height: 160px; max-height: 220px; }
+            }
+            @media (max-width: 575.98px) {
+                .service-img-square {
+                    min-height: 220px;
+                    max-height: 400px;
+                    object-position: center center !important;
+                }
+            }
+            </style>
+        </div>
+    </section>
+ <!-- Contact Section -->
+ <section class="contact-section section-padding py-5 bg-soft-pink">
+     <div class="container">
+         <div class="text-center mb-5 section-header">
+             <div class="contact-subtitle">
+                 <span class="section-subtitle text-success text-uppercase fw-bold d-block mb-2">Get in Touch</span>
+                 <h2 class="section-title display-4 fw-bold text-navy">Contact Us</h2>
+             </div>
+         </div>
+         <div class="row align-items-center g-5">
+             <div class="col-lg-6">
+                 <div class="contact-content">
+                     <h3 class="h4 mb-4 text-navy">Have Questions? We are always thrilled to hear from you!</h3>
+                     <div class="contact-info">
+                         <div class="contact-item mb-4">
+                             <div class="d-flex align-items-center">
+                                 <div class="contact-icon bg-success text-white rounded-circle p-3 me-4">
+                                     <i class="fas fa-phone-alt fa-2x"></i>
+                                 </div>
+                                 <div>
+                                     <h4 class="mb-1 text-navy">Call Us</h4>
+                                     <p class="text-muted mb-0">@ 98952 61111</p>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="contact-item mb-4">
+                             <div class="d-flex align-items-center">
+                                 <div class="contact-icon bg-success text-white rounded-circle p-3 me-4">
+                                     <i class="fas fa-envelope fa-2x"></i>
+                                 </div>
+                                 <div>
+                                     <h4 class="mb-1 text-navy">Email Us</h4>
+                                     <p class="text-muted mb-0">contact@shobitha.com</p>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="contact-item mb-4">
+                             <div class="d-flex align-items-center">
+                                 <div class="contact-icon bg-success text-white rounded-circle p-3 me-4">
+                                     <i class="fas fa-map-marker-alt fa-2x"></i>
+                                 </div>
+                                 <div>
+                                     <h4 class="mb-1 text-navy">Visit Us</h4>
+                                     <p class="text-muted mb-0">Kanhangad, Kerala, India</p>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <p class="text-muted my-4">Come visit us or contact us for all your queries. Or you can just fill out the online booking and enquiry form and we will get back to you as soon as we can.</p>
+                     <a href="pages/booking.html" class="btn btn-success btn-lg rounded-pill px-4 py-3 shadow-sm">
+                         BOOK AN APPOINTMENT
+                         <i class="fas fa-chevron-down ms-2"></i>
+                     </a>
+                 </div>
+             </div>
+             <div class="col-lg-6">
+                 <div class="contact-image position-relative">
+                     <img src="https://images.pexels.com/photos/3065015/pexels-photo-3065015.jpeg" alt="Beauty Model" class="img-fluid rounded-4 shadow-lg">
+                     <div class="contact-overlay position-absolute top-0 start-0 w-100 h-100 bg-success bg-opacity-25 rounded-4"></div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </section>
+    <!-- Testimonials -->
+    <section class="testimonials section-padding py-5 bg-soft-white">
+        <div class="container">
+            <h2 class="text-center mb-5 section-header">What Our Clients Say</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card p-4">
+                        <div class="stars mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-3">"Amazing bridal makeup experience! Highly professional and talented team."</p>
+                        <div class="client-info">
+                            <h5 class="mb-0">Priya S.</h5>
+                            <small>Bridal Client</small>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card p-4">
+                        <div class="stars mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-3">"Amazing bridal makeup experience! Highly professional and talented team."</p>
+                        <div class="client-info">
+                            <h5 class="mb-0">Priya S.</h5>
+                            <small>Bridal Client</small>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card p-4">
+                        <div class="stars mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-3">"Amazing bridal makeup experience! Highly professional and talented team."</p>
+                        <div class="client-info">
+                            <h5 class="mb-0">Priya S.</h5>
+                            <small>Bridal Client</small>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <!-- Add more testimonials here -->
+            </div>
+        </div>
+    </section>
+<!-- Gallery Section -->
+<section class="gallery-section section-padding py-5 bg-soft-pink">
+    <div class="container">
+        <div class="text-center mb-5 section-header">
+            <h6 class="section-subtitle text-success text-uppercase fw-bold">Transforming Lives</h6>
+            <h2 class="section-title display-4 fw-bold">Our Gallery</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/3738340/pexels-photo-3738340.jpeg" alt="Facials" class="img-fluid">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Facials</h4>
+                        <i class="fas fa-camera"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/3738345/pexels-photo-3738345.jpeg" alt="Hydrodermabrasion" class="img-fluid">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Hydrodermabrasion</h4>
+                        <i class="fas fa-camera"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/3993444/pexels-photo-3993444.jpeg" alt="Hair Blows" class="img-fluid">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Hair Blows</h4>
+                        <i class="fas fa-camera"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/3997391/pexels-photo-3997391.jpeg" alt="Nail Art" class="img-fluid">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Nail Art</h4>
+                        <i class="fas fa-camera"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/3985298/pexels-photo-3985298.jpeg" alt="Skin Care" class="img-fluid">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Skin Care</h4>
+                        <i class="fas fa-camera"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/3065209/pexels-photo-3065209.jpeg" alt="Bridal Makeup" class="img-fluid">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Bridal Makeup</h4>
+                        <i class="fas fa-camera"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Latest Posts Section -->
+<section class="blog-section section-padding py-5 bg-soft-white">
+    <div class="container">
+        <div class="text-center mb-5 section-header">
+            <h6 class="section-subtitle text-success text-uppercase fw-bold">Beauty & Wellness</h6>
+            <h2 class="section-title display-4 fw-bold">Latest Posts</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="blog-card h-100">
+                    <div class="blog-image">
+                        <img src="https://images.pexels.com/photos/3762871/pexels-photo-3762871.jpeg" alt="Skincare Tips" class="img-fluid">
+                        <div class="blog-date">
+                            <span class="day">25</span>
+                            <span class="month">AUG</span>
+                        </div>
+                    </div>
+                    <div class="blog-content p-4">
+                        <h3 class="blog-title h4 mb-3">Skincare Tips for Youthful Skin</h3>
+                        <p class="blog-excerpt text-muted mb-4">Discover the essential skincare routine steps and products that will help you maintain a youthful, radiant complexion. Learn about the importance of sunscreen, antioxidants, and proper hydration.</p>
+                        <a href="pages/blog.html" class="btn btn-outline-success rounded-pill px-4">
+                            READ MORE
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="blog-card h-100">
+                    <div class="blog-image">
+                        <img src="https://images.pexels.com/photos/3738363/pexels-photo-3738363.jpeg" alt="Pre-Wedding Skincare" class="img-fluid">
+                        <div class="blog-date">
+                            <span class="day">23</span>
+                            <span class="month">AUG</span>
+                        </div>
+                    </div>
+                    <div class="blog-content p-4">
+                        <h3 class="blog-title h4 mb-3">Pre-Wedding Skincare Routine</h3>
+                        <p class="blog-excerpt text-muted mb-4">Planning your wedding? Start your skincare journey early with our comprehensive guide to achieving that perfect bridal glow. From facials to diet tips, we've got you covered.</p>
+                        <a href="pages/blog.html" class="btn btn-outline-success rounded-pill px-4">
+                            READ MORE
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="blog-card h-100">
+                    <div class="blog-image">
+                        <img src="https://images.pexels.com/photos/3762875/pexels-photo-3762875.jpeg" alt="Summer Skincare" class="img-fluid">
+                        <div class="blog-date">
+                            <span class="day">20</span>
+                            <span class="month">AUG</span>
+                        </div>
+                    </div>
+                    <div class="blog-content p-4">
+                        <h3 class="blog-title h4 mb-3">Summer Skincare Practices</h3>
+                        <p class="blog-excerpt text-muted mb-4">Keep your skin healthy and protected during the hot summer months with these essential tips. Learn about the best products and practices to prevent sun damage and maintain hydration.</p>
+                        <a href="pages/blog.html" class="btn btn-outline-success rounded-pill px-4">
+                            READ MORE
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Footer -->
+    <footer class="footer bg-navy text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand mb-4">
+                        <div class="d-flex align-items-center">
+                            <div class="logo-icon me-3">
+                                <img src="img/logo.png" alt="Shobitha Logo" class="img-fluid" style="max-height: 60px;">
+                            </div>
+                            <div>
+                                <h3 class="h4 text-white mb-1">Shobitha</h3>
+                                <p class="text-muted mb-0">Hair Care & Bridal Makeup</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-muted mb-4">Transforming beauty, one client at a time. Experience professional care and exceptional service at Shobitha Salon.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3 fs-5"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3 fs-5"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3 fs-5"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h4 class="text-white mb-4">Quick Links</h4>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><a href="index.html" class="text-muted text-decoration-none">Home</a></li>
+                                <li class="mb-2"><a href="pages/about.html" class="text-muted text-decoration-none">About Us</a></li>
+                                <li class="mb-2"><a href="pages/services.html" class="text-muted text-decoration-none">Services</a></li>
+                                <li class="mb-2"><a href="pages/gallery.html" class="text-muted text-decoration-none">Gallery</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><a href="pages/blog.html" class="text-muted text-decoration-none">Blog</a></li>
+                                <li class="mb-2"><a href="pages/contact.html" class="text-muted text-decoration-none">Contact</a></li>
+                                <li class="mb-2"><a href="pages/booking.html" class="text-muted text-decoration-none">Book Appointment</a></li>
+                                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h4 class="text-white mb-4">Contact Information</h4>
+                    <div class="contact-info">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-map-marker-alt me-3 text-success"></i>
+                            <span class="text-muted">Kanhangad, Kerala, India</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-phone-alt me-3 text-success"></i>
+                            <span class="text-muted">@ 98952 61111</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-envelope me-3 text-success"></i>
+                            <span class="text-muted">contact@shobitha.com</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-clock me-3 text-success"></i>
+                            <span class="text-muted">Mon - Sat: 9 AM - 7 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-muted my-4">
+            <div class="footer-bottom text-center">
+                <p class="text-muted mb-0">&copy; 2025 Shobitha Hair Care & Bridal Makeup. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Additional Styling for Footer -->
+    <style>
+        .footer {
+            background-color: #2c3e50 !important;
+            color: #ffffff;
+        }
+
+        .footer a {
+            color: #ffffff;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer a:hover {
+            opacity: 1;
+        }
+
+        .footer .social-links a {
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .footer .social-links a:hover {
+            color: #28a745 !important;
+            transform: scale(1.2);
+        }
+
+        .footer .text-muted {
+            color: rgba(255,255,255,0.6) !important;
+        }
+    </style>
+
+    <!-- WhatsApp Button -->
+    <div class="whatsapp-sticky">
+        <a href="https://wa.me/919876543210" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Bootstrap 5 JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <!-- WhatsApp Chat Container -->
+    <div id="whatsapp-chat-container"></div>
+
+    <!-- WhatsApp Chat Script -->
+    <script src="/js/whatsapp-chat.js"></script>
+
+    <style>
+    .topbar {
+        background: #fff;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 0.97rem;
+        min-height: 38px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1100;
+        justify-content: center !important;
+    }
+    .main-navbar { top: 38px !important; }
+    @media (max-width: 991.98px) {
+        .topbar { display: none !important; }
+        .main-navbar { top: 0 !important; }
+    }
+    .topbar-content {
+        justify-content: center;
+        width: 100%;
+    }
+    .topbar-mobile {
+        justify-content: center !important;
+        text-align: center !important;
+    }
+    .topbar-mobile .d-flex {
+        justify-content: center !important;
+    }
+    .topbar-social .topbar-icon {
+        color: #de0d87;
+        font-size: 1.15rem;
+        margin-right: 10px;
+        transition: color 0.2s;
+        text-decoration: none;
+    }
+    .topbar-social .topbar-icon:last-child { margin-right: 0; }
+    .topbar-social .topbar-icon:hover { color: #c30b76; }
+    .topbar-center { gap: 1.2rem; }
+    .topbar-location {
+        color: #de0d87;
+        background: #f8f9fa;
+        border-radius: 20px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: background 0.2s, color 0.2s;
+        font-size: 1rem;
+    }
+    .topbar-location:hover {
+        background: #de0d87;
+        color: #fff;
+    }
+    .topbar-google-review-simple {
+        background: #fff;
+        border-radius: 20px;
+        border: 1.5px solid #e0e0e0;
+        color: #222;
+        font-weight: 500;
+        text-decoration: none;
+        transition: box-shadow 0.2s, border 0.2s;
+        box-shadow: 0 2px 8px rgba(60,60,60,0.04);
+        padding-right: 10px;
+        font-size: 1rem;
+    }
+    .topbar-google-review-simple:hover {
+        border: 1.5px solid #de0d87;
+        box-shadow: 0 4px 16px rgba(222,13,135,0.08);
+    }
+    .google-g-logo {
+        display: inline-block;
+        vertical-align: middle;
+        background: #fff;
+        border-radius: 50%;
+        border: 1px solid #e0e0e0;
+    }
+    .google-rating {
+        color: #34a853;
+        font-weight: 700;
+        font-size: 1.08em;
+        margin-left: 2px;
+    }
+    .google-star {
+        font-size: 1.1em;
+        vertical-align: middle;
+    }
+    .google-review-text {
+        color: #5f6368;
+        font-size: 0.97em;
+        margin-left: 2px;
+        font-weight: 500;
+    }
+    .topbar-mobile .topbar-icon {
+        color: #de0d87;
+        font-size: 1.15rem;
+        margin-right: 10px;
+        transition: color 0.2s;
+        text-decoration: none;
+    }
+    .topbar-mobile .topbar-icon:last-child { margin-right: 0; }
+    .topbar-mobile .topbar-icon:hover { color: #c30b76; }
+    .topbar-mobile .topbar-location, .topbar-mobile .topbar-google-review-simple {
+        font-size: 0.97rem;
+        margin-right: 8px;
+        margin-bottom: 4px;
+    }
+    .topbar-mobile .topbar-location:hover {
+        background: #de0d87;
+        color: #fff;
+    }
+    .topbar-mobile .topbar-google-review-simple:hover {
+        border: 1.5px solid #de0d87;
+        box-shadow: 0 4px 16px rgba(222,13,135,0.08);
+    }
+    </style>
+</body>
+</html>
